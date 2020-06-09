@@ -15,6 +15,41 @@
 + 加表锁：LOCK TABLE tablename locktype, tablename2 locktype<br>
 + locktype：READ只能读表, read LOCAL, write, low priority write<br>
 + 解锁：UNLOCK TABLE[S],解锁不需要表名，会解除当前用户所有的表锁<br>
++ 判断查询语句是否使用到了索引（explain）： 在语句前面加上explain，查询结果就为explain的相关信息；返回结果字段如下：
+    + id：id标识符，如果有join或者子查询，那么是多个，按照查询顺序来，id越大执行的优先级越高，相同就从上往下执行
+    + select_type：查找类型
+        + simple简单查询
+        + primary主要的
+        + union联合
+        + dependent union依赖联合
+        + union result联合结果
+        + subquery子查询
+        + dependent subquery联合子查询
+        + derived派生
+        + uncacheable subquery无法缓存的
+    + table：查找的表名，如果用了简称，则显示简称
+    + type：表示表的连接类型，性能重要指标，从上到下，性能由低到高；通常要保证查询的type至少为range，最好达到ref
+        + all：full table scan，全盘扫描
+        + index：full index scan，扫描全部索引
+        + range：检索给定范围内的行，使用索引选择行
+        + ref：表示上述表的连接查询条件，既哪些列和常量用于查找索引上的值
+        + eq_ref：类似ref，区别就是使用唯一索引，例如unique key或者primary key作为关联条件
+        + const、system：当mysql对某部分查询进行优化，并转化为一个常量时，为此类型，例如，where中使用主键；system为const的特例，查询的表只有一条数据时，为system
+        + NULL：mysql查询时优化语句，查询时甚至不用查询表或者访问索引
+    + possible_keys：查询时可能使用的索引
+    + key：查询时具体使用的key，可通过`use index`或者`force index`或者`ignore index`来强制使用或者忽略某些索引
+    + key_len：使用到的索引的长度，不损失精度的情况下，越短越好
+    + ref：列与索引的比较
+    + rows：mysql认为获得结果需要扫描的行数
+    + extra：执行情况的描述和说明，避免文件排序和临时表
+        + using where：不读取所有信息，仅通过索引就可以获取所需数据
+        + using temporary：使用临时表，比如group by，order by
+        + using filesort：使用文件排序，order by时，无法使用索引来完成
+        + using join buffer：强调在获取连接查询条件时没有使用索引，而使用了缓存，意味着这里可能需要加索引了
+        + impossible where：不存在的where，强调了where会导致没有符合条件的行
+        + select table optimized away：仅通过使用索引，优化器可能仅从聚合函数结果中返回一行
+        + no table used：使用from dual 或不含任何from子句
+
 
 
 ## 数据库连接池的连接数
