@@ -19,10 +19,12 @@
     <script src="static/jquery-2.2.0.min.js"></script>
     <script src="static/mouse.min.js"></script>
     <script type="text/javascript">
+      if(!/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent)){
         $.shuicheMouse({
             type:11,
             color:"rgba(187,67,128,1)"
         })
+      }
     </script>
   </div>
 
