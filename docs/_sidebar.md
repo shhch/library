@@ -34,6 +34,8 @@
 
 - [<font size=2.8 style="color:#42b983"><u>**区块链**</u></font>](blockchain/blockchain)
 
+- [<font size=2.8 style="color:#42b983"><u>**技术归统**</u></font>](technology/technology)
+
 - [<font size=2.8 style="color:#42b983"><u>**临时**</u></font>](tmp)
 
 - [<font size=2.8 style="color:#42b983"><u>**旧坑未填,新坑已添**</u></font>](TODO)
