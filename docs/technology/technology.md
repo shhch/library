@@ -14,5 +14,5 @@
 
 ### 工具
 
-+ [转码工具ImageMagick](https://imagemagick.org/)
++ [功能强大的图片处理ImageMagick](https://imagemagick.org/)
 + [linux在线man文档: https://git.io/linux](https://github.com/jaywcjlove/linux-command)
