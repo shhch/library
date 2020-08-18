@@ -8,4 +8,11 @@
 
 ### 公众号
 
-### github账号
+### github
+
++ [原始化图片](https://github.com/fogleman/primitive)
+
+### 工具
+
++ [转码工具ImageMagick](https://imagemagick.org/)
++ [linux在线man文档: https://git.io/linux](https://github.com/jaywcjlove/linux-command)

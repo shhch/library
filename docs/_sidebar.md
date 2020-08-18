@@ -1,6 +1,7 @@
 <!-- docs/_sidebar.md -->
 
-- [<font size=2.8 style="color:#42b983"><u>**首页**</u></font>](README "I will do my best")
+<!-- - [<font size=2.8 style="color:#42b983"><u>**首页**</u></font>](README "I will do my best") -->
+- [<font size=2.8 style="color:#42b983"><u>**首页**</u></font>](https://raw.githubusercontent.com/shhch/shhch/master/README.md "I will do my best")
 
 - [<font size=2.8 style="color:#42b983"><u>**网络**</u></font>](network)
 
