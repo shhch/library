@@ -1,5 +1,10 @@
 # go
 
+## golang 版本变更
+
++ [go1](https://golang.org/doc/go1)
++ ...TODO
+
 ## 基础知识
 
 + map，slice，channel属于引用类型，make返回的是Type，new返回的是指针类型的Type（即\*Type），new也可以创建map、slice、channel，但是返回的是对应的指针，如果想要使用，需要通过取指针的值`*`来进行使用；

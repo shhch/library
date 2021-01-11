@@ -5,6 +5,7 @@
 ### 文章
 
 + [golang gc 分析工具"gctrace"](https://zhuanlan.zhihu.com/p/73183820)
++ [golang atomic包](https://blog.betacat.io/post/golang-atomic-value-exploration/)
 
 ### 公众号
 
