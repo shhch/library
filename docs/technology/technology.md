@@ -17,3 +17,4 @@
 
 + [功能强大的图片处理ImageMagick](https://imagemagick.org/)
 + [linux在线man文档: https://git.io/linux](https://github.com/jaywcjlove/linux-command)
++ [graphmagick: 比ImageMagick更高效、安全的图片处理]()
