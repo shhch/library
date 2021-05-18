@@ -29,3 +29,10 @@
 + [thestocks](http://www.thestocks.im)
 + [pixabay](https://pixabay.com/)
 + [pexels](https://www.pexels.com/)
+
+### 编码规范与标准
+
++ [shell](https://google.github.io/styleguide/shellguide.html)
++ [golang](https://github.com/golang/go/wiki/CodeReviewComments)
++ [kubernetes](https://kubernetes.io/docs/concepts/configuration/overview/)
++ [kubernetes项目中文件、目录与包命名的讨论](https://github.com/kubernetes/kubernetes/issues/4851)
